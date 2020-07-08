@@ -1,0 +1,52 @@
+<html>
+    <title>hotspot_logout</title>
+    <head>
+   
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="icon" type="image/png" href="gambar/mainku.png">
+    </head>
+
+<body>
+    <script language="JavaScript">
+        
+            function openLogin() {
+            if (window.name != 'hotspot_logout') return true;
+            open('$(link-login)', '_blank', '');
+            window.close();
+            return false;
+            }
+        //-->
+        </script>
+    <div class="navbar">
+        <a class="navbar-brand" href="login.html"><img src="gambar/mainku.png" height="30px" width="30px"></a>
+            <a class="active" href="login.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="harga.html"><i class="fa fa-bullhorn"></i> harga paket</a> 
+            <a href="kontak.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+            <a href="about.html"><i class="fa fa-fw fa-user"></i> tentang</a>
+          </div>
+          <tr><center>
+            <td align="center" valign="middle">
+            <b>you have just logged out</b> <br><br>
+            <table class="tabula" border="1">  
+            <tr><td align="right">user name</td><td>$(username)</td></tr>
+            <tr><td align="right">IP address</td><td>$(ip)</td></tr>
+            <tr><td align="right">MAC address</td><td>$(mac)</td></tr>
+            <tr><td align="right">session time</td><td>$(uptime)</td></tr>
+            $(if session-time-left)
+            <tr><td align="right">time left</td><td>$(session-time-left)</td></tr>
+            $(endif)
+            <tr><td align="right">bytes up/down:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+            </table>
+            <br>
+            <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+                <input type="submit" value="Login Kembali" class="tombol ">
+            </form>
+        </td></center>
+
+
+
+          <footer class="ft">
+    <div class="kopi" style="position: relative;"><center>&copy; 2020 ILHAM CELLULER</center></div>
+</footer>
+</body>   
+ </html>

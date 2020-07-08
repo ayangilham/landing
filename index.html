@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+   
+
+        <link rel="shortcut icon" href="images\mainku.png">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="icon" type="image/png" href="gambar/mainku.png">
+    <title>landing page</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="stylesheet" type="text/css" href="cssmobile.css">
+    </head>
+    <body>
+        $(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+    </form>
+    <script type="text/javascript" src="/md5.js"></script>
+      
+          
+            <div class="navbar" id="idnavbar">
+                <center></cnter><a><img src="gambar/mainku.png" height="25" width="25"></a></center>
+                    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+                    <a href="harga.html"><i class="fa fa-bullhorn"></i> harga paket</a> 
+                    <a href="kontak.html"><i class="fa fa-fw fa-envelope"></i> Alamat</a> 
+                    <a href="about.html"><i class="fa fa-fw fa-user"></i> tentang</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                  </div>
+                  <script>
+                    function myFunction() {
+                      var x = document.getElementById("idnavbar");
+                      if (x.className === "navbar") {
+                        x.className += " responsive";
+                      } else {
+                        x.className = "navbar";
+                      }
+                    }
+                    </script>
+         
+            </div>
+        </br>
+    
+
+
+            <div class="login">
+                <div class="imgcontainer">
+                    <img src="gambar/mainku.png" alt="Avatar" class="avatar">
+                  </div>
+                </br>
+                <div class="asd">Silahkan Masukan  </div>
+            </br>
+                    <form action="index.html" method="post" onSubmit="return validasi()">
+                       
+                        <div>
+                            <label>Username:</label>
+                            <input type="text" name="username" id="username" />
+                        </div>
+                        <div>
+                            <label>Password:</label>
+                            <input type="password" name="password" id="password" />
+                        </div>			
+                        <div>
+                            <input type="submit" value="Login" class="tombol ">
+                            <form name="login" action="$(link-login-only)" method="post"
+                            $(if chap-id) onSubmit="return doLogin()" $(endif)>
+							<input type="hidden" name="dst" value="$(link-orig)" />
+                            <input type="hidden" name="popup" value="true" />
+                            
+                        </div>
+                        <br>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                          </label>
+                      
+                    </form>
+                </br>
+            </br>
+        </br>
+    </br>
+</br>
+   
+                </div>            
+                <footer class="ft">
+                    <div class="kopi" style="position: relative;"><center>&copy; 2020 ILHAM CELLULER</center></div>
+                </footer>
+            </body>
+            <script type="text/javascript">
+                  document.login.username.focus();
+                //-->
+                </script>
+            <script type="text/javascript">
+                function validasi() {
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;		
+                    if (username != "" && password!="") {
+                        return true;
+                    }else{
+                        alert('Username dan Password harus di isi !');
+                        return false;
+                    }
+                }
+             
+            </script>
+            </html>
